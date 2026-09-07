@@ -1,0 +1,15 @@
+# elconfin.es
+#
+# MIENTRAS SEA MAQUETA: la web esta cerrada a buscadores entera. Cuando el
+# estado 1 sea real -- formulario conectado, portada con rotulo, bio del
+# autor -- se borran las dos lineas de abajo y se descomenta el bloque
+# definitivo, y se quitan los <meta name="robots"> de index y estado-2.
+User-agent: *
+Disallow: /
+
+# --- BLOQUE DEFINITIVO, descomentar al publicar ---
+# User-agent: *
+# Disallow: /gracias.html
+# Disallow: /descargas/
+#
+# Sitemap: https://elconfin.es/sitemap.xml

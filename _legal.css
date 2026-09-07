@@ -1,0 +1,41 @@
+/* Hoja común de las páginas legales — mismo pliego que la portada, sin láminas. */
+:root{
+  --pergamino:#EFE4CE; --papel:#F6EEDD; --mesa:#DFD2B4;
+  --tinta:#1E2A3C; --tinta-media:#3E4859; --suave:#5D667A;
+  --ambar:#D98A34; --ambar-hondo:#A9631D; --linea:#CDBC99;
+  --display:"Fraunces","Iowan Old Style",Georgia,serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{background:var(--mesa)}
+body{margin:0;background:var(--mesa);color:var(--tinta);
+  font-family:var(--body);font-size:17px;line-height:1.68;-webkit-font-smoothing:antialiased}
+.pliego{max-width:42rem;margin:0 auto;background:var(--pergamino);
+  padding:clamp(2.4rem,6vw,4rem) clamp(1.3rem,5vw,3.4rem) 0;
+  box-shadow:0 0 60px rgba(60,45,20,.13)}
+.volver{font-family:var(--display);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ambar-hondo);text-decoration:none;display:inline-block;margin-bottom:2.2rem}
+.volver:hover{color:var(--tinta)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4.6vw,2.4rem);
+  line-height:1.12;letter-spacing:-.02em;text-wrap:balance;margin:0 0 .6rem}
+.entradilla{color:var(--suave);margin:0 0 2.2rem;max-width:32rem}
+h2{font-family:var(--display);font-weight:600;font-size:1.15rem;line-height:1.3;
+  text-wrap:balance;margin:2.4rem 0 .7rem;padding-top:1.2rem;border-top:1px solid var(--linea)}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:0}
+p,li{max-width:34rem}
+p{margin:0 0 1rem}
+ul{padding-left:1.15rem;margin:0 0 1rem}
+li{margin-bottom:.55rem}
+li::marker{color:var(--ambar)}
+strong{font-weight:600}
+a{color:var(--tinta-media)}
+a:hover{color:var(--ambar-hondo)}
+.dato{background:var(--papel);border-left:3px solid var(--ambar);
+  padding:1rem 1.2rem;margin:0 0 1.2rem;max-width:34rem}
+.dato p{margin:0}
+.hueco{background:var(--papel);border:1.5px dashed var(--ambar-hondo);
+  padding:.7rem .9rem;margin:0 0 1rem;font-size:.9rem;color:var(--ambar-hondo);max-width:34rem}
+footer{margin-top:3rem;padding:1.8rem 0 2.4rem;border-top:1px solid var(--linea);
+  font-size:.85rem;color:var(--suave)}
+footer nav{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-bottom:.7rem}
+.fecha{font-size:.85rem;color:var(--suave);font-style:italic;margin-top:2rem}

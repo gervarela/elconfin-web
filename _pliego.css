@@ -1,0 +1,230 @@
+/* El Confín · dirección A «Pliego» — hoja común de la landing.
+   La usan index.html (estado 1) y estado-2.html. Un solo sitio donde tocar. */
+
+  /* ------------------------------------------------------------------
+     El Confín · dirección A "Pliego"
+     Tres tintas de marketing/sistema_visual_marca.md. Un solo mundo
+     visual, a propósito: el pergamino es el fondo siempre y nunca se
+     oscurece, así que no hay modo oscuro y todos los colores se pintan
+     de forma explícita.
+     ------------------------------------------------------------------ */
+  :root{
+    --pergamino:  #EFE4CE;
+    --papel:      #F6EEDD;
+    --mesa:       #DFD2B4;
+    --tinta:      #1E2A3C;
+    --tinta-media:#3E4859;
+    --suave:      #5D667A;
+    --ambar:      #D98A34;
+    --ambar-hondo:#A9631D;
+    --linea:      #CDBC99;
+    --linea-fina: #DED0B0;
+
+    --display:"Fraunces","Iowan Old Style",Georgia,serif;
+    --body:"Literata",Georgia,"Times New Roman",serif;
+
+    --medida: 32rem;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--mesa)}
+  body{
+    margin:0;background:var(--mesa);color:var(--tinta);
+    font-family:var(--body);font-size:17px;line-height:1.68;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  /* height:auto es obligatorio junto a los atributos width/height del HTML:
+     sin él, el atributo height fija la altura y la imagen sale estirada. */
+  img{max-width:100%;height:auto;display:block}
+
+  /* la hoja */
+  .pliego{
+    max-width:47rem;margin:0 auto;background:var(--pergamino);
+    padding:clamp(2.4rem,6vw,4.5rem) clamp(1.3rem,5vw,4rem) 0;
+    box-shadow:0 0 60px rgba(60,45,20,.13);
+  }
+
+  /* ---------- tipografía ---------- */
+  h1{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(2rem,5.6vw,3.1rem);line-height:1.08;letter-spacing:-.02em;
+    text-align:center;text-wrap:balance;margin:0 0 .9rem;
+  }
+  h2{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(1.35rem,3.4vw,1.7rem);line-height:1.2;letter-spacing:-.015em;
+    text-align:center;text-wrap:balance;margin:0 0 1.4rem;
+  }
+  p{margin:0 0 1.1rem}
+  .centro{max-width:var(--medida);margin-left:auto;margin-right:auto}
+  .marca{
+    font-family:var(--display);font-size:.78rem;letter-spacing:.34em;
+    text-transform:uppercase;color:var(--ambar-hondo);text-align:center;
+    margin:0 0 2.4rem;
+  }
+  .sub{
+    text-align:center;font-size:1.05rem;color:var(--suave);
+    max-width:27rem;margin:0 auto 2.4rem;text-wrap:balance;
+  }
+  .destacado{
+    font-family:var(--display);font-size:1.12rem;line-height:1.45;
+    border-left:3px solid var(--ambar);padding-left:1.15rem;
+    margin:1.8rem auto 0;max-width:var(--medida);
+  }
+
+  /* ---------- láminas ---------- */
+  .lamina{
+    border:1px solid var(--linea);
+    box-shadow:0 3px 14px rgba(60,45,20,.2);
+    background:var(--papel);
+  }
+  .cubierta{position:relative;width:min(19rem,72%);margin:0 auto .8rem}
+  .pie-lamina{
+    text-align:center;font-size:.85rem;font-style:italic;color:var(--suave);
+    margin:0 0 2.6rem;
+  }
+  /* marca de dónde irá el rótulo de la serie — QUITAR con el arte final */
+  .rotulo-pendiente{
+    position:absolute;left:9%;right:9%;top:5.5%;
+    border:1.5px dashed var(--ambar-hondo);border-radius:2px;
+    padding:.4rem .3rem;text-align:center;
+    font-family:var(--display);font-size:.6rem;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ambar-hondo);
+    background:rgba(246,238,221,.72);
+  }
+
+  .banda{height:6px;background:var(--ambar);margin:0 0 2.6rem}
+  .regla{border:none;border-top:1px solid var(--linea);margin:2.8rem 0}
+
+  /* ---------- formulario ---------- */
+  .apunte{max-width:27rem;margin:0 auto;text-align:center}
+  .apunte .titular{
+    font-family:var(--display);font-size:1.26rem;font-weight:600;
+    line-height:1.25;margin-bottom:.45rem;text-wrap:balance;
+  }
+  form{display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem}
+  input[type=email]{
+    font-family:var(--body);font-size:1rem;padding:.78rem .9rem;
+    border:1px solid var(--linea);background:var(--papel);color:var(--tinta);
+    border-radius:0;width:100%;
+  }
+  input[type=email]::placeholder{color:#9A9AA8}
+  .oculto{
+    position:absolute;width:1px;height:1px;overflow:hidden;
+    clip-path:inset(50%);white-space:nowrap;
+  }
+  input[type=email]:focus-visible{outline:2px solid var(--ambar);outline-offset:1px}
+  button{
+    font-family:var(--display);font-weight:600;font-size:1rem;letter-spacing:.02em;
+    padding:.8rem 1rem;border:none;border-radius:0;cursor:pointer;
+    background:var(--tinta);color:var(--pergamino);
+  }
+  button:hover{background:var(--ambar-hondo)}
+  button:focus-visible{outline:2px solid var(--ambar);outline-offset:2px}
+  .consent{
+    display:flex;gap:.55rem;align-items:flex-start;text-align:left;
+    font-size:.84rem;color:var(--suave);line-height:1.5;
+  }
+  .consent input{margin-top:.35rem;flex:none}
+  .consent a{color:var(--tinta-media)}
+  .gracias{
+    border:1px solid var(--ambar);background:var(--papel);
+    padding:1.1rem 1.2rem;margin-top:1.2rem;text-align:left;
+  }
+  .gracias p{margin:0}
+  .gracias .fuerte{font-family:var(--display);font-weight:600;margin-bottom:.3rem}
+
+  /* ---------- fichas de personaje ---------- */
+  .fichas{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    gap:1.4rem 1.1rem;margin:1.8rem 0 0;padding:0;list-style:none;
+  }
+  .fichas li{margin:0}
+  .fichas img{width:100%;height:auto}
+  .fichas .nombre{
+    font-family:var(--display);font-weight:600;font-size:1.02rem;
+    margin:.65rem 0 .1rem;
+  }
+  .fichas .id{font-size:.82rem;color:var(--ambar-hondo);margin:0 0 .3rem}
+  .fichas .linea{font-size:.92rem;color:var(--tinta-media);margin:0;line-height:1.5}
+
+  /* ---------- bloque de folclore ---------- */
+  .folclore{margin-top:1.6rem}
+  .folclore .lamina{margin-bottom:1.6rem}
+  .folclore .gancho{
+    font-family:var(--display);font-weight:600;font-size:1.2rem;line-height:1.3;
+    text-wrap:balance;margin-bottom:1rem;
+  }
+
+  /* ---------- quién está detrás ---------- */
+  .autor{
+    display:grid;grid-template-columns:1fr;gap:1.2rem;
+    max-width:var(--medida);margin:0 auto;
+  }
+  .retrato{
+    width:8.5rem;height:8.5rem;flex:none;margin:0 auto;
+    border:1px solid var(--linea);background:var(--papel);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:var(--display);font-size:.68rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ambar-hondo);padding:.6rem;
+  }
+
+  /* ---------- pie ---------- */
+  footer{
+    margin-top:3.2rem;padding:2.2rem 0 2.6rem;
+    border-top:1px solid var(--linea);text-align:center;
+  }
+  footer .sello{width:3.1rem;margin:0 auto 1.1rem;opacity:.9}
+  footer nav{
+    display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;justify-content:center;
+    font-size:.87rem;margin-bottom:.9rem;
+  }
+  footer a{color:var(--tinta-media)}
+  footer a:hover{color:var(--ambar-hondo)}
+  footer .legal{font-size:.8rem;color:var(--suave);margin:0}
+
+  /* ---------- aviso de maqueta · BLOQUE ENTERO A BORRAR AL PUBLICAR ---------- */
+  .aviso-maqueta{
+    position:sticky;bottom:0;z-index:10;
+    background:var(--tinta);color:var(--pergamino);
+    font-family:var(--body);font-size:.8rem;line-height:1.5;
+    padding:.7rem 1rem;text-align:center;
+  }
+  .aviso-maqueta b{color:var(--ambar)}
+
+  @media (min-width:40rem){
+    .fichas{grid-template-columns:repeat(4,1fr);gap:1.1rem .9rem}
+    .autor{grid-template-columns:auto 1fr;gap:1.6rem;align-items:start}
+    .retrato{margin:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important}
+  }
+
+/* ------------------------------------------------------------------
+   ESTADO 2 · el imán. Estas reglas no estorban al estado 1, que
+   simplemente no usa las clases.
+   ------------------------------------------------------------------ */
+.iman{
+  background:var(--papel);
+  border-top:5px solid var(--ambar);
+  border-bottom:1px solid var(--linea);
+  padding:1.9rem 1.5rem 1.7rem;
+  margin:0 0 .4rem;
+}
+.iman h2{margin-bottom:.9rem}
+.iman .que-es{max-width:29rem;margin:0 auto 0;text-align:center}
+.iman .apunte{margin-top:1.2rem}
+.iman .micro{
+  font-size:.85rem;font-style:italic;color:var(--suave);
+  margin:.9rem auto 0;max-width:27rem;line-height:1.5;
+}
+.iman .cuento{font-style:italic}
+
+/* la caja de descarga de la página de gracias */
+.descarga{
+  display:inline-block;font-family:var(--display);font-weight:600;font-size:1.02rem;
+  background:var(--tinta);color:var(--pergamino);
+  padding:.85rem 1.6rem;text-decoration:none;margin:.4rem 0 .5rem;
+}
+.descarga:hover{background:var(--ambar-hondo);color:var(--pergamino)}
+.descarga:focus-visible{outline:2px solid var(--ambar);outline-offset:2px}
